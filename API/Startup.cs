@@ -37,7 +37,7 @@ namespace API
                 return ConnectionMultiplexer.Connect(configuration);
             });
 
-
+            services.AddControllers();
             services.AddApplicationServices();
             services.AddIdentityServices(_config);
             services.AddSwaggerDocumentation();
@@ -49,7 +49,7 @@ namespace API
                 });
             });
 
-            services.AddControllers();
+            
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
