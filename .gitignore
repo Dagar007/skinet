@@ -3,3 +3,6 @@ bin
 appsettings.json
 *.db
 .vs
+publish
+wwwroot
+.DS_Store

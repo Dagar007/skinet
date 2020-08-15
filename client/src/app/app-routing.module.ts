@@ -16,22 +16,24 @@ const routes: Routes = [
   { path: 'basket', loadChildren: () => import('./basket/basket.module').then(mod =>
       mod.BasketModule), data: {breadcrumb: 'Basket'}
   },
-  { path: 'checkout',
+  {
+    path: 'checkout',
     canActivate: [AuthGuard],
-    loadChildren: () => import('./checkout/checkout.module').then(mod =>
-      mod.CheckoutModule), data: {breadcrumb: 'Checkout'}
+    loadChildren: () => import('./checkout/checkout.module')
+      .then(mod => mod.CheckoutModule), data: { breadcrumb: 'Checkout' }
   },
-  { path: 'orders',
+  {
+    path: 'orders',
     canActivate: [AuthGuard],
-    loadChildren: () => import('./order/order.module').then(mod =>
-      mod.OrderModule), data: {breadcrumb: 'Orders'}
+    loadChildren: () => import('./order/order.module')
+      .then(mod => mod.OrderModule), data: { breadcrumb: 'Orders' }
   },
-  { path: 'account',
-          canActivate: [AuthGuard],
-          loadChildren: () => import('./account/account.module').then(mod =>
-        mod.AccountModule), data: {breadcrumb: {skip: true}}
+  {
+    path: 'account',
+    loadChildren: () => import('./account/account.module')
+      .then(mod => mod.AccountModule), data: { breadcrumb: { skip: true } }
   },
-  {path: '**', redirectTo: 'not-found', pathMatch: 'full'}
+  { path: '**', redirectTo: 'not-found', pathMatch: 'full' }
 ];
 
 @NgModule({
