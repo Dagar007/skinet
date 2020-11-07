@@ -15,7 +15,12 @@ import { RouterModule } from '@angular/router';
 
 
 @NgModule({
-  declarations: [PagingHeaderComponent, PagerComponent, OrderTotalsComponent, TextInputComponent, StepperComponent, BasketSummaryComponent],
+  declarations: [PagingHeaderComponent,
+    PagerComponent,
+    OrderTotalsComponent,
+    TextInputComponent,
+    StepperComponent,
+    BasketSummaryComponent],
   imports: [
     CommonModule,
     PaginationModule.forRoot(),
